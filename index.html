@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: black;
+    }
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .loginForm h1 {
+      text-align: center;
+      color: white;
+    }
+    .loginForm {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 250px;
+      display: flex;
+    }
+    .loginForm .form {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .loginForm input {
+      padding: 7px 12px;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid gray;
+    }
+    .loginForm button {
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+      background-color: rgb(136, 0, 136);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .description {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .description button {
+      background-color: transparent;
+      color: rgb(136, 0, 136);
+    }
+
+    .game {
+      display: none;
+    }
+
+    .gameContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .gameContainer * {
+      margin: 0;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="loginForm">
+      <h1>BlindMaze</h1>
+      <div class="form">
+        <input type="text" name="name" id="" placeholder="Your name">
+        <button id="start" disabled>Start</button>
+        <div class="description">
+          <button >Leaderboard</button>
+          <button >Show Instruction</button>
+        </div>
+      </div>
+    </div>
+    <div class="game">
+      <div class="gameContainer">
+        <h1>Memorizing Time</h1>
+        <h2 class="time">10s</h2>
+        <canvas></canvas>
+      </div>
+    </div>
+  </div>
+  <script src="/js/main.js"></script>
+  <script src="/js/classes.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+</html>
